@@ -319,6 +319,26 @@ namespace AdvancedCSharp01
 
             #endregion
 
+            Console.WriteLine("==============");
+
+            #region Q17 Covariance vs Contravariance
+
+            // Covariance uses the "out" keyword.
+            // It allows conversion from a more derived type
+            // to a less derived type.
+
+            // Example:
+            // IProducer<Student> -> IProducer<Person>
+
+
+            // Contravariance uses the "in" keyword.
+            // It allows conversion from a less derived type
+            // to a more derived type.
+
+            // Example:
+            // IConsumer<Person> -> IConsumer<Student>
+
+            #endregion
 
         }
     }
