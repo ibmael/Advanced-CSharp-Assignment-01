@@ -366,6 +366,24 @@ namespace AdvancedCSharp01
 
             #endregion
 
+            Console.WriteLine("==============");
+
+            #region Q19 Inheritance from Generic Class
+
+            // A class can inherit from a generic class
+            // by passing a type parameter to the base class.
+
+            // Example:
+            // AdvancedContainer<T> : BaseContainer<T>
+
+            AdvancedContainer<string> genericInheritance =
+                new AdvancedContainer<string>();
+
+            genericInheritance.Value = "Generic Inheritance";
+
+            genericInheritance.Display();
+
+            #endregion
 
         }
     }
