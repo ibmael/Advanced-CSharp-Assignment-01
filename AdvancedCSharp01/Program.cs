@@ -15,6 +15,23 @@
             // 3. Avoid unnecessary casting.
 
             #endregion
+
+            #region Q2 Generic Container
+
+            Container<int> numberContainer = new Container<int>();
+
+            numberContainer.Add(100);
+
+            Console.WriteLine($"Number: {numberContainer.Get()}");
+
+
+            Container<string> textContainer = new Container<string>();
+
+            textContainer.Add("Hello Generics");
+
+            Console.WriteLine($"Text: {textContainer.Get()}");
+
+            #endregion
         }
     }
 }
