@@ -174,6 +174,23 @@ namespace AdvancedCSharp01
 
             #endregion
 
+            Console.WriteLine("==============");
+
+            #region Q11 Base Class Constraint
+
+            // A base class constraint restricts a generic type
+            // to a specific base class or any class derived from it.
+
+            Student baseStudent = new Student();
+
+            baseStudent.Name = "Ibrahim";
+
+            PersonManager<Student> manager =
+                new PersonManager<Student>();
+
+            manager.DisplayName(baseStudent);
+
+            #endregion
 
 
         }
