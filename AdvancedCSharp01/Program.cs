@@ -1,4 +1,6 @@
 ﻿using AdvancedCSharp01.Generics;
+using AdvancedCSharp01.Models;
+
 
 namespace AdvancedCSharp01
 {
@@ -136,6 +138,42 @@ namespace AdvancedCSharp01
             #endregion
 
             Console.WriteLine("==============");
+
+            #region Q9 New Constraint
+
+            // The new() constraint requires the generic type
+            // to have a public parameterless constructor.
+
+            // It allows us to create a new object of type T using new T().
+
+            ObjectFactory<Student> studentFactory =
+                new ObjectFactory<Student>();
+
+            Student newStudent = studentFactory.Create();
+
+            newStudent.Name = "Ibrahim";
+
+            Console.WriteLine($"Student Name: {newStudent.Name}");
+
+            #endregion
+
+            Console.WriteLine("==============");
+
+            #region Q10 Interface Constraint
+
+            // An interface constraint restricts a generic type
+            // to types that implement a specific interface.
+
+            Student printableStudent = new Student();
+
+            printableStudent.Name = "Ibrahim";
+
+            Printer<Student> printer = new Printer<Student>();
+
+            printer.PrintItem(printableStudent);
+
+            #endregion
+
 
 
         }
