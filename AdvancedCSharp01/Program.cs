@@ -1,4 +1,6 @@
-﻿namespace AdvancedCSharp01
+﻿using AdvancedCSharp01.Generics;
+
+namespace AdvancedCSharp01
 {
     internal class Program
     {
@@ -92,6 +94,25 @@
 
             // A generic interface is an interface that uses a type parameter.
             // It can work with different data types while keeping type safety.
+
+            #endregion
+
+            Console.WriteLine("==============");
+
+            #region Q7 Struct Constraint
+
+            // The struct constraint restricts a generic type
+            // to non-nullable value types only.
+
+            // Examples:
+            // int, double, bool, char, DateTime
+
+            ValueContainer<int> number = new ValueContainer<int>(100);
+
+            ValueContainer<double> price = new ValueContainer<double>(99.5);
+
+            Console.WriteLine($"Number: {number.Value}");
+            Console.WriteLine($"Price: {price.Value}");
 
             #endregion
         }
