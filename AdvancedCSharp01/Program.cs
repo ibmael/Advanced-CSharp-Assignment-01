@@ -239,6 +239,22 @@ namespace AdvancedCSharp01
 
             #endregion
 
+            Console.WriteLine("==============");
+
+            #region Q14 Assign Default Value to Generic Variable
+
+            // We can assign a default value to a generic variable
+            // by using the default keyword.
+
+            // Example:
+            // T value = default(T);
+
+            // Modern C# also allows:
+            // T value = default;
+
+            #endregion
+
+
         }
     }
 }

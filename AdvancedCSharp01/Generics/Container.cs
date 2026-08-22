@@ -8,7 +8,7 @@ namespace AdvancedCSharp01
     {
         #region Field
 
-        private T item;
+        private T? item = default;
 
         #endregion
 
@@ -19,7 +19,7 @@ namespace AdvancedCSharp01
             item = value;
         }
 
-        public T Get()
+        public T? Get()
         {
             return item;
         }
