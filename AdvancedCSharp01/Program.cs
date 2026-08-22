@@ -1,4 +1,5 @@
 ﻿using AdvancedCSharp01.Generics;
+using AdvancedCSharp01.Interfaces;
 using AdvancedCSharp01.Models;
 
 
@@ -272,6 +273,27 @@ namespace AdvancedCSharp01
 
             #endregion
 
+            Console.WriteLine("==============");
+
+            #region Q15 Covariance
+
+            // Covariance allows a generic interface to use
+            // a more derived type where a less derived type is expected.
+
+            // The "out" keyword is used for covariance.
+            // It means the generic type is used as an output type.
+
+            IProducer<Student> studentProducer =
+    new StudentProducer();
+
+            IProducer<Person> personProducer =
+                studentProducer;
+
+            Person producedPerson = personProducer.GetItem();
+
+            Console.WriteLine($"Produced Person: {producedPerson.Name}");
+
+            #endregion
 
         }
     }
