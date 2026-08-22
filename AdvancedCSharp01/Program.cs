@@ -254,6 +254,24 @@ namespace AdvancedCSharp01
 
             #endregion
 
+            Console.WriteLine("==============");
+
+            #region Q15 Generic Inheritance
+
+            // Yes, a generic class can inherit from another generic class.
+
+            // The derived generic class can pass its type parameter
+            // to the generic base class.
+
+            AdvancedContainer<string> inheritanceContainer =
+    new AdvancedContainer<string>();
+
+            inheritanceContainer.Value = "Generic Inheritance";
+
+            inheritanceContainer.Display();
+
+            #endregion
+
 
         }
     }
