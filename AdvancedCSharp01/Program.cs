@@ -212,6 +212,32 @@ namespace AdvancedCSharp01
 
             #endregion
 
+            Console.WriteLine("==============");
+
+            #region Q13 default(T)
+
+            // default(T) returns the default value of a generic type T.
+
+            // int          -> 0
+            // bool         -> false
+            // string       -> null
+            // custom class -> null
+
+            Console.WriteLine($"Default int: {default(int)}");
+            Console.WriteLine($"Default bool: {default(bool)}");
+
+            string? defaultString = default(string);
+            Student? defaultStudent = default(Student);
+
+            Console.WriteLine(
+                $"Default string: {defaultString ?? "null"}"
+            );
+
+            Console.WriteLine(
+                $"Default Student: {(defaultStudent == null ? "null" : "Object")}"
+            );
+
+            #endregion
 
         }
     }
