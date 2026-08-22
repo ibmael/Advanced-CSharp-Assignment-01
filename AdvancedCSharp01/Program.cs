@@ -16,6 +16,8 @@
 
             #endregion
 
+            Console.WriteLine("==============");
+
             #region Q2 Generic Container
 
             Container<int> numberContainer = new Container<int>();
@@ -30,6 +32,25 @@
             textContainer.Add("Hello Generics");
 
             Console.WriteLine($"Text: {textContainer.Get()}");
+
+            #endregion
+
+            Console.WriteLine("==============");
+
+            #region Q3 Multiple Type Parameters
+
+            // Multiple type parameters allow a generic class
+            // to work with more than one data type.
+
+            // Example:
+            // Pair<TKey, TValue>
+            // TKey represents the type of the key.
+            // TValue represents the type of the value.
+
+            Pair<int, string> student = new Pair<int, string>(1, "Ibrahim");
+
+            Console.WriteLine($"Key: {student.Key}");
+            Console.WriteLine($"Value: {student.Value}");
 
             #endregion
         }
