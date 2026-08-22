@@ -72,6 +72,19 @@
 
             #endregion
 
+            Console.WriteLine("==============");
+
+            #region Q5 Generic FindMax Method
+
+            int maxNumber = GenericMethods.FindMax(10, 20);
+
+            Console.WriteLine($"Maximum Number: {maxNumber}");
+
+            double maxDouble = GenericMethods.FindMax(15.5, 9.8);
+
+            Console.WriteLine($"Maximum Double: {maxDouble}");
+
+            #endregion
         }
     }
 }
