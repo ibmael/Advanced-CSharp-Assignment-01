@@ -192,6 +192,26 @@ namespace AdvancedCSharp01
 
             #endregion
 
+            Console.WriteLine("==============");
+
+            #region Q12 Multiple Constraints
+
+            // Multiple constraints allow a generic type parameter
+            // to have more than one constraint at the same time.
+
+            // Example:
+            // T must inherit from Person,
+            // implement IPrintable,
+            // and have a public parameterless constructor.
+
+            PersonProcessor<Student> processor =
+    new PersonProcessor<Student>();
+
+            Student processedStudent =
+                processor.CreateAndPrint("Ibrahim");
+
+            #endregion
+
 
         }
     }
