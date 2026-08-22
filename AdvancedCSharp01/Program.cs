@@ -53,6 +53,25 @@
             Console.WriteLine($"Value: {student.Value}");
 
             #endregion
+
+            Console.WriteLine("==============");
+
+            #region Q4 Generic Method
+
+            // A generic method is a method that works with different data types
+            // by using a type parameter such as <T>.
+
+            int x = 10;
+            int y = 20;
+
+            Console.WriteLine($"Before Swap: x = {x}, y = {y}");
+
+            GenericMethods.Swap(ref x, ref y);
+
+            Console.WriteLine($"After Swap: x = {x}, y = {y}");
+
+            #endregion
+
         }
     }
 }
