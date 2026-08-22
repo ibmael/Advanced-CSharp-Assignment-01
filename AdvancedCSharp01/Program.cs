@@ -115,6 +115,29 @@ namespace AdvancedCSharp01
             Console.WriteLine($"Price: {price.Value}");
 
             #endregion
+
+            Console.WriteLine("==============");
+
+            #region Q8 Class Constraint
+
+            // The class constraint restricts a generic type
+            // to reference types only.
+
+            ReferenceContainer<string> name =
+    new ReferenceContainer<string>("Ibrahim");
+
+            Console.WriteLine($"Name: {name.Value}");
+
+            // ReferenceContainer<int> number =
+            //     new ReferenceContainer<int>(100);
+
+            // Error: int is a value type.
+
+            #endregion
+
+            Console.WriteLine("==============");
+
+
         }
     }
 }
