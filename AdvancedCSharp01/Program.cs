@@ -385,6 +385,46 @@ namespace AdvancedCSharp01
 
             #endregion
 
+            Console.WriteLine("==============");
+
+            #region Q20 Generic Cache
+
+            Cache<int, string> cache = new Cache<int, string>();
+
+            cache.Add(
+                1,
+                "Laptop",
+                TimeSpan.FromMinutes(5)
+            );
+
+            cache.Add(
+                2,
+                "Phone",
+                TimeSpan.FromMinutes(5)
+            );
+
+            cache.Add(
+    3,
+    "Expired Item",
+    TimeSpan.FromSeconds(-1)
+);
+
+            Console.WriteLine(
+                $"Expired Key Exists: {cache.Contains(3)}"
+            );
+
+            Console.WriteLine($"Key 1 Exists: {cache.Contains(1)}");
+            Console.WriteLine($"Key 2 Exists: {cache.Contains(2)}");
+
+            Console.WriteLine($"Key 1 Value: {cache.Get(1)}");
+
+            cache.Remove(2);
+
+            Console.WriteLine($"Key 2 After Remove: {cache.Contains(2)}");
+
+
+
+            #endregion
         }
     }
 }
