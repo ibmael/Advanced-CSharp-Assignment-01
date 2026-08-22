@@ -85,6 +85,15 @@
             Console.WriteLine($"Maximum Double: {maxDouble}");
 
             #endregion
+
+            Console.WriteLine("==============");
+
+            #region Q6 Generic Interface
+
+            // A generic interface is an interface that uses a type parameter.
+            // It can work with different data types while keeping type safety.
+
+            #endregion
         }
     }
 }
