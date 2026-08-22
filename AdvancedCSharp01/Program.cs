@@ -340,6 +340,33 @@ namespace AdvancedCSharp01
 
             #endregion
 
+            Console.WriteLine("==============");
+
+            #region Q18 Static Members in Generic Types
+
+            // Static members in generic types are separate
+            // for each closed generic type.
+
+            // Example:
+            // Counter<int> has its own static counter.
+            // Counter<string> has another static counter.
+
+            GenericCounter<int> intCounter1 = new GenericCounter<int>();
+            GenericCounter<int> intCounter2 = new GenericCounter<int>();
+
+            GenericCounter<string> stringCounter1 = new GenericCounter<string>();
+
+            Console.WriteLine(
+                $"int Counter: {GenericCounter<int>.Count}"
+            );
+
+            Console.WriteLine(
+                $"string Counter: {GenericCounter<string>.Count}"
+            );
+
+            #endregion
+
+
         }
     }
 }
