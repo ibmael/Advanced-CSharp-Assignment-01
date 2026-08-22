@@ -295,6 +295,31 @@ namespace AdvancedCSharp01
 
             #endregion
 
+            Console.WriteLine("==============");
+
+            #region Q16 Contravariance
+
+            // Contravariance allows a generic interface to use
+            // a less derived type where a more derived type is expected.
+
+            // The "in" keyword is used for contravariance.
+            // It means the generic type is used as an input type.
+
+            IConsumer<Person> personConsumer =
+    new PersonConsumer();
+
+            IConsumer<Student> studentConsumer =
+                personConsumer;
+
+            Student consumedStudent = new Student();
+
+            consumedStudent.Name = "Ibrahim";
+
+            studentConsumer.Consume(consumedStudent);
+
+            #endregion
+
+
         }
     }
 }
